@@ -1,0 +1,17 @@
+{
+ "baseUrl": "https://vk.com/",
+ "baseApiUrl": "https://api.vk.com/method/",
+ "userId": "627657327",
+ "vkApiVersion": "5.131",
+ "wallPost" : "wall.post",
+ "wallEdit" : "wall.edit",
+ "wallPhotoUploadServer": "photos.getWallUploadServer",
+ "photoPath": "src/main/resources/image.jpg",
+ "actualPhotoPath": "src/main/resources/actualImage.jpg",
+ "saveWallPhoto": "photos.saveWallPhoto",
+ "createComment": "wall.createComment",
+ "isLiked": "likes.isLiked",
+ "liked": 1,
+ "deletePost": "wall.delete",
+ "randomStrLength": 10
+}

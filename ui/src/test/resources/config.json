@@ -1,0 +1,11 @@
+{"domainSize": 4,
+  "emailSize": 6,
+  "passwordSize": 10,
+  "numberOfInterests": 3,
+  "imagePath": "\\src\\test\\resources\\image.jpg",
+  "url": "https://userinyerface.com/",
+  "startTimer": "00:00:00",
+  "robotDelay": 1000,
+  "unselectAll": "Unselect all",
+  "selectAll": "Select all"
+}

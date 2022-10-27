@@ -1,0 +1,11 @@
+{
+  "selectTestsWithMinTime": "select project.name as project, test.name as test_name, min(timediff(end_time, start_time)) as min_time from project join test on  project.id = test.project_id group by test_name order by project ASC, test_name ASC;",
+  "selectTotalUniqTests": "select project.name, count(distinct(test.name)) as tests_count from test join project on test.project_id = project.id group by project.name order by project.name , test.name ASC;",
+  "selectTestsBeforeExpectedDate": "select project.name as project, test.name as test_name, test.start_time from project, test where project.id = test.project_id and test.start_time > '%s' order by project ASC, test_name ASC;",
+  "selectTotalTestsByBrowser": "select count(browser) as browsers from test where browser = '%s' union select count(browser) as total from test where browser = '%s';",
+  "queryParams": {
+    "browserFirst": "Firefox",
+    "browserSecond": "Chrome",
+    "date": "07.10.2015"
+  }
+}

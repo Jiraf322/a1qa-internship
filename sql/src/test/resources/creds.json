@@ -1,0 +1,6 @@
+{
+  "jdbcNameDB": "union_reporting",
+  "jdbcUsername": "",
+  "jdbcPassword": "",
+  "localUrl": "jdbc:mysql://localhost:3306/"
+}

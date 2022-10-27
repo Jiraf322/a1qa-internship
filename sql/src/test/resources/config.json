@@ -1,0 +1,7 @@
+{
+  "logFileFormat": ".csv",
+  "logFileName": "log_",
+  "logDirectory": "src/test/resources/log/",
+  "queryFilePath": "src/test/resources/query.json",
+  "credentialsFilePath": "src/test/resources/creds.json"
+}
