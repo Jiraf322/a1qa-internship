@@ -1,0 +1,2 @@
+class SoftAssert:
+    pass

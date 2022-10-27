@@ -1,0 +1,12 @@
+{
+   "DriverConfig":{
+      "BrowserName":"chrome",
+      "Options":[
+         "--incognito",
+         "lang=en-GB",
+         "--start-maximized"
+      ]
+   },
+   "url":"https://demoqa.com/",
+   "timeout":5
+}
