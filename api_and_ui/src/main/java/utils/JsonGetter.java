@@ -4,7 +4,10 @@ import aquality.selenium.core.utilities.JsonSettingsFile;
 import static testData.TestConstants.KEY_FORMAT;
 import static testData.TestConstants.TEST_DATA_FILE_NAME;
 
-public class JsonGetter {
+public final class JsonGetter {
+
+    private JsonGetter() {
+    }
 
     public static int getIntData(String key) {
         return Integer.parseInt(getStringData(key));

@@ -3,7 +3,10 @@ package utils.dataProviders;
 import utils.JsonGetter;
 import static testData.TestConstants.*;
 
-public class ConfigDataProvider {
+public final class ConfigDataProvider {
+
+    private ConfigDataProvider() {
+    }
 
     public static String getBaseUrl() {
         return JsonGetter.getStringData(BASE_URL_KEY);

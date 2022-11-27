@@ -9,17 +9,20 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-public class DownloadUtil {
+public final class DownloadUtil {
+
+    //TODO: add exception to prevent reflection access
+    private DownloadUtil(){
+    }
 
     public static void downloadPhoto(String photoUrl) {
-        try {
+        try (InputStream is = new URL(photoUrl).openStream()) {
             AqualityServices.getLogger().info(String.format("Download Image by url: %s", photoUrl));
-            InputStream in = new URL(photoUrl).openStream();
-            Files.copy(in, Paths.get(new File(ConfigDataProvider.getActualPhotoPath()).getAbsolutePath()));
+            Files.copy(is, Paths.get(new File(ConfigDataProvider.getActualPhotoPath()).getAbsolutePath()));
         } catch (IOException e) {
-            AqualityServices.getLogger().error(String.format("Image with was not found by URL: %s",
+            AqualityServices.getLogger().error(String.format("Unchecked I/O exception, URL: %s",
                     photoUrl));
-            throw new IllegalArgumentException("Image not found");
+            throw new IllegalArgumentException("Unchecked I/O exception");
         }
     }
 }

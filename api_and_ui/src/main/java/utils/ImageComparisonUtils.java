@@ -8,7 +8,10 @@ import utils.dataProviders.ConfigDataProvider;
 import java.awt.image.BufferedImage;
 import java.io.File;
 
-public class ImageComparisonUtils {
+public final class ImageComparisonUtils {
+
+    private ImageComparisonUtils() {
+    }
 
     public static boolean compareImages(String actualImg, String expectedImg){
         BufferedImage expectedImage = ImageComparisonUtil.readImageFromResources(expectedImg);

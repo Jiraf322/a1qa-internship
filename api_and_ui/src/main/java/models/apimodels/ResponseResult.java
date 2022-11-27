@@ -2,6 +2,7 @@ package models.apimodels;
 
 import io.restassured.response.Response;
 import io.restassured.response.ResponseBody;
+import org.apache.commons.lang3.Validate;
 
 public class ResponseResult {
 
@@ -11,8 +12,8 @@ public class ResponseResult {
 
     public ResponseResult(Response response) {
         this.statusCode = response.getStatusCode();
-        this.contentType = response.getContentType();
-        this.result = response.getBody();
+        this.contentType = Validate.notNull(response.getContentType());
+        this.result = Validate.notNull(response.getBody());
     }
 
     public int getStatusCode() {

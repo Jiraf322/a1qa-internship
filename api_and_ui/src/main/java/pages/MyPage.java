@@ -14,14 +14,13 @@ public class MyPage extends Form {
     private final String LABEL_OF_COMMENTS = "//div[contains(@id, '%s') and contains(@id, '%s')]//div[contains(@class," +
             " 'wall_reply_text')]";
     private final String BUTTON_LIKE_OF_POST = "//div[@data-reaction-target-object = 'wall%s_%s']";
+    private final ILink image = getElementFactory().getLink(By.xpath("//div[@id='pv_photo']/img"), "Image");
+    private final IButton btnClosePost = getElementFactory().getButton(By.xpath("//div[@class = 'pv_close_btn']"),
+            "Button close opened post");
 
     public MyPage() {
         super(By.id("profile"), "My page");
     }
-
-    private final ILink image = getElementFactory().getLink(By.xpath("//div[@id='pv_photo']/img"), "Image");
-    private final IButton btnClosePost = getElementFactory().getButton(By.xpath("//div[@class = 'pv_close_btn']"),
-            "Button close opened post");
 
     public ILabel getLabelOfPost(String userId, String postId) {
         return getElementFactory().getLabel(By.id(String.format("wpt%s_%s", userId, postId)), String.format("post with" +

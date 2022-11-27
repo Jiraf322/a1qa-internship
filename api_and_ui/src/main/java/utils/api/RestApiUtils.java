@@ -24,7 +24,7 @@ public class RestApiUtils {
     }
 
     public static String getIdFromUploadedPhoto(ResponseResult responseResult) {
-        return StringUtils.getStringWithoutBrackets(responseResult.getResult().path(RESPONSE_ID_KEY).toString());
+        return StringUtils.removeSquareBrackets(responseResult.getResult().path(RESPONSE_ID_KEY).toString());
     }
 
 }

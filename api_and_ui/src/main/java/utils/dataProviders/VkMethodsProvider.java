@@ -3,7 +3,11 @@ package utils.dataProviders;
 import utils.JsonGetter;
 import static testData.TestConstants.*;
 
-public class VkMethodsProvider {
+public final class VkMethodsProvider {
+
+    private VkMethodsProvider() {
+    }
+
     public static String getBaseApiUrl() {
         return JsonGetter.getStringData(BASE_API_URL_KEY);
     }

@@ -6,17 +6,16 @@ import utils.dataProviders.DataProvider;
 import org.openqa.selenium.By;
 import aquality.selenium.forms.Form;
 
-public class VkcPage extends Form{
+public class VkcPage extends Form {
+
+    private final ITextBox txbPassword = getElementFactory().getTextBox(By.xpath(
+            "//input[@autocomplete = 'current-password']"), "Textbox password");
+    private final IButton btnContinue = getElementFactory().getButton(By.xpath(
+            "//span[contains(@class, 'vkuiButton') and contains(@class, 'in')]"), "Button continue");
 
     public VkcPage() {
         super(By.className("vkuiAppRoot"), "Login Page");
     }
-
-    private final ITextBox txbPassword = getElementFactory().getTextBox(By.xpath(
-            "//input[@autocomplete = 'current-password']"), "Textbox password");
-
-    private final IButton btnContinue = getElementFactory().getButton(By.xpath(
-            "//span[contains(@class, 'vkuiButton') and contains(@class, 'in')]"), "Button continue");
 
     public void sendPassword() {
         txbPassword.clearAndType(DataProvider.getCredentials().getPassword());

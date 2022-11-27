@@ -1,8 +1,11 @@
 package utils;
 
-public class StringUtils {
+public final class StringUtils {
 
-    public static String getStringWithoutBrackets(String str) {
+    private StringUtils() {
+    }
+
+    public static String removeSquareBrackets(String str) {
         return str.replaceAll("\\[", "").replaceAll("]","");
     }
 }

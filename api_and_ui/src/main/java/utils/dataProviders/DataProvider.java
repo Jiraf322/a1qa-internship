@@ -7,8 +7,10 @@ import testData.TestConstants;
 import java.io.File;
 import java.io.IOException;
 
-public class DataProvider {
+public final class DataProvider {
 
+    private DataProvider() {
+    }
     public static Credentials getCredentials() {
         try {
             return new ObjectMapper().readValue(new File(TestConstants.CREDENTIALS_FILE_PATH), Credentials.class);
